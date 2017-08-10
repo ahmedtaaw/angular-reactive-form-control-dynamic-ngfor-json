@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, FormGroupName, FormBuilder, Validators, FormArray,AbstractControl, ValidatorFn } from '@angular/forms';
 import {IEmaillist} from './emaillist'
 import {EmaillistService} from './emaillist.service';
+import {InlineEditorComponent} from 'ng2-inline-editor';
 @Component({
   selector: 'app-emaillist',
   templateUrl: './emaillist.component.html',
@@ -29,6 +30,7 @@ export class EmaillistComponent implements OnInit {
         }))
       )
     });
+    console.log(this.membersForm);
   }
 
 }

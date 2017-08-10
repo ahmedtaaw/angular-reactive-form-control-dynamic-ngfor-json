@@ -7,7 +7,7 @@
   <div formArrayName="memberDetails">
   <div *ngFor="let single of Imemberemails; let $index=index ">
     <div [formGroupName]="$index">
-      <input placeholder="Email" type="text" formControlName="newEmail"/>
+      <inline-editor placeholder="Email" type="text" formControlName="newEmail"></inline-editor>
     </div>
   </div>
   </div>
