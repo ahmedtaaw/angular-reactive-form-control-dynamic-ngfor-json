@@ -1,0 +1,14 @@
+<h1>Email List</h1>
+<ul>
+  <li *ngFor="let nodeEmail of Imemberemails">{{nodeEmail.memberemail}}</li>
+</ul>
+
+<form [formGroup]="membersForm">
+  <div formArrayName="memberDetails">
+  <div *ngFor="let single of Imemberemails; let $index=index ">
+    <div [formGroupName]="$index">
+      <input placeholder="Email" type="text" formControlName="newEmail"/>
+    </div>
+  </div>
+  </div>
+</form>
